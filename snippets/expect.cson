@@ -376,3 +376,48 @@
     'description':'Asserts that the given object (may be an array, or a function, or anything with keys) does not contain any of the provided keys.
     The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
     By default, a shallow check with Object.prototype.hasOwnProperty is performed.'
+
+# toHaveBeenCalled
+  'expect(spy).toHaveBeenCalled();':
+    'prefix':'expectToHaveBeenCalled'
+    'body':'''
+      expect($1).toHaveBeenCalled();
+    '''
+    'description':'Asserts the given spy function has been called at least once.'
+
+  'toHaveBeenCalled();':
+    'prefix':'toHaveBeenCalled'
+    'body':'''
+      toHaveBeenCalled();
+    '''
+    'description':'Asserts the given spy function has been called at least once.'
+
+# toHaveBeenNotCalled
+  'expect(spy).toHaveBeenNotCalled();':
+    'prefix':'expectToHaveNotBeenCalled'
+    'body':'''
+      expect($1).toHaveBeenNotCalled();
+    '''
+    'description':'Asserts the given spy function has not been called.'
+
+  'toHaveBeenNotCalled();':
+    'prefix':'toHaveBeenNotCalled'
+    'body':'''
+      toHaveBeenNotCalled();
+    '''
+    'description':'Asserts the given spy function has not been called.'
+
+# toHaveBeenCalledWith
+  'expect(spy).toHaveBeenCalledWith();':
+    'prefix':'expectToHaveBeenCalledWith'
+    'body':'''
+      expect($1).toHaveBeenCalledWith($2);
+    '''
+    'description':'Asserts the given spy function has been called with the expected arguments.'
+
+  'toHaveBeenCalledWith();':
+    'prefix':'toHaveBeenCalledWith'
+    'body':'''
+      toHaveBeenCalledWith($1);
+    '''
+    'description':'Asserts the given spy function has been called with the expected arguments.'
