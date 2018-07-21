@@ -1,16 +1,170 @@
-#applicable to Express v4.x.x
 '.source.js':
 # Methods with Shorthands/Templates
+
+#Require and Imports
+  'const expect = require(\'expect\');':
+    'prefix':'requireExpect'
+    'body':'''
+      const expect = require(\'expect\');
+    '''
+    'description':'Require expect package in file. (ES5)'
+
+  'import expect from \'expect\';':
+    'prefix':'importExpect'
+    'body':'''
+      import expect from \'expect\';
+    '''
+    'description':'Import expect package in file. (ES6)'
+
+#Assertions
+# toExist
+  'expect().toExist();':
+    'prefix':'expectToExist'
+    'body':'''
+      expect($1).toExist();
+    '''
+    'description':'Asserts the given object is truthy.'
+
+  'toExist();':
+    'prefix':'toExist'
+    'body':'''
+      toExist($1);
+    '''
+    'description':'Asserts the given object is truthy.'
+
+# toNotExist
+  'expect().toNotExist();':
+    'prefix':'expectToNotExist'
+    'body':'''
+      expect($1).toNotExist();
+    '''
+    'description':'Asserts the given object is falsy.'
+
+  'toNotExist();':
+    'prefix':'toNotExist'
+    'body':'''
+      toExist($1);
+    '''
+    'description':'Asserts the given object is falsy.'
+
+# toBe
   'expect().toBe();':
-    'prefix':'expecttobe'
+    'prefix':'expectToBe'
     'body':'''
       expect($1).toBe($2);
     '''
     'description':'Asserts that object is strictly equal to value using ==='
 
   'toBe();':
-    'prefix':'tobe'
+    'prefix':'toBe'
     'body':'''
       toBe($1);
     '''
     'description':'Asserts that object is strictly equal to value using ==='
+
+# toNotBe
+  'expect().toNotBe();':
+    'prefix':'expectToNotBe'
+    'body':'''
+      expect($1).toNotBe($2);
+    '''
+    'description':'Asserts that object is strictly NOT equal to value using ==='
+
+  'toNotBe();':
+    'prefix':'toNotBe'
+    'body':'''
+      toNotBe($1);
+    '''
+    'description':'Asserts that object is strictly NOT equal to value using ==='
+
+# toEqual
+  'expect().toEqual();':
+    'prefix':'expectToNotBe'
+    'body':'''
+      expect($1).toEqual($2);
+    '''
+    'description':'Asserts that the given object equals value using npm module is-equal.'
+
+  'toEqual();':
+    'prefix':'toEqual'
+    'body':'''
+      toEqual($1);
+    '''
+    'description':'Asserts that the given object equals value using npm module is-equal.'
+
+# toNotEqual
+  'expect().toNotEqual();':
+    'prefix':'expectToNotEqual'
+    'body':'''
+      expect($1).toNotEqual($2);
+    '''
+    'description':'Asserts that the given object is not equal to value using npm module is-equal.'
+
+  'toNotEqual();':
+    'prefix':'toNotEqual'
+    'body':'''
+      toNotEqual($1);
+    '''
+    'description':'Asserts that the given object is not equal to value using npm module is-equal.'
+
+# toThrow
+  'expect().toThrow();':
+    'prefix':'expectToThrow'
+    'body':'''
+      expect($1).toThrow($2);
+    '''
+    'description':'Asserts that the given block throws an error.
+    The error argument may be a constructor (to test using instanceof), or a string/RegExp to test against error.message.'
+
+  'toThrow();':
+    'prefix':'toThrow'
+    'body':'''
+      toThrow($1);
+    '''
+    'description':'Asserts that the given block throws an error.
+    The error argument may be a constructor (to test using instanceof), or a string/RegExp to test against error.message.'
+
+# toNotThrow
+  'expect().toNotThrow();':
+    'prefix':'expectToNotThrow'
+    'body':'''
+      expect($1).toNotThrow($2);
+    '''
+    'description':'Asserts that the given block does not throw.'
+
+  'toNotThrow();':
+    'prefix':'toNotThrow'
+    'body':'''
+      toNotThrow($1);
+    '''
+    'description':'Asserts that the given block does not throw.'
+
+# toBeA
+  'expect().toBeA();':
+    'prefix':'expectToBeA'
+    'body':'''
+      expect($1).expectToBeA($2);
+    '''
+    'description':'Asserts the typeof the given object is string OR is an instanceof constructor.'
+
+  'toBeA();':
+    'prefix':'toBeA'
+    'body':'''
+      toBeA($1);
+    '''
+    'description':'Asserts the typeof the given object is string OR is an instanceof constructor.'
+
+# toNotBeA
+  'expect().toNotBeA();':
+    'prefix':'expectToNotBeA'
+    'body':'''
+      expect($1).toNotBeA($2);
+    '''
+    'description':'Asserts the typeof the given object is NOT string OR is NOT an instanceof constructor.'
+
+  'toNotBeA();':
+    'prefix':'toNotBeA'
+    'body':'''
+      toNotBeA($1);
+    '''
+    'description':'Asserts the typeof the given object is string OR is NOT an instanceof constructor.'
