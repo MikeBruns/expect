@@ -1,0 +1,16 @@
+#applicable to Express v4.x.x
+'.source.js':
+# Methods with Shorthands/Templates
+  'expect().toBe();':
+    'prefix':'expecttobe'
+    'body':'''
+      expect($1).toBe($2);
+    '''
+    'description':'Asserts that object is strictly equal to value using ==='
+
+  'toBe();':
+    'prefix':'tobe'
+    'body':'''
+      toBe($1);
+    '''
+    'description':'Asserts that object is strictly equal to value using ==='

@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle expect",
+        "command": "expect:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "expect",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "expect:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
