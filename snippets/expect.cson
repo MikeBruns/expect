@@ -168,3 +168,211 @@
       toNotBeA($1);
     '''
     'description':'Asserts the typeof the given object is string OR is NOT an instanceof constructor.'
+
+# toMatch
+  'expect().toMatch();':
+    'prefix':'expectToMatch'
+    'body':'''
+      expect($1).toMatch($2);
+    '''
+    'description':'Asserts the given string or object matches a pattern.
+    When using a string, pattern must be a RegExp. When using an object, pattern may be anything acceptable to tmatch.'
+
+  'toMatch();':
+    'prefix':'toMatch'
+    'body':'''
+      toMatch($1);
+    '''
+    'description':'Asserts the given string or object matches a pattern.
+    When using a string, pattern must be a RegExp. When using an object, pattern may be anything acceptable to tmatch.'
+
+# toNotMatch
+  'expect().toNotMatch();':
+    'prefix':'expectToNotMatch'
+    'body':'''
+      expect($1).toNotMatch($2);
+    '''
+    'description':'Asserts the given string or object does not match a pattern.
+    When using a string, pattern must be a RegExp. When using an object, pattern may be anything acceptable to tmatch.'
+
+  'toNotMatch();':
+    'prefix':'toNotMatch'
+    'body':'''
+      toNotMatch($1);
+    '''
+    'description':'Asserts the given string or object does not match a pattern.
+    When using a string, pattern must be a RegExp. When using an object, pattern may be anything acceptable to tmatch.'
+
+# toBeLessThan
+  'expect().toBeLessThan();':
+    'prefix':'expectToBeLessThan'
+    'body':'''
+      expect($1).toBeLessThan($2);
+    '''
+    'description':'Asserts the given number is less than value.'
+
+  'toBeLessThan();':
+    'prefix':'toBeLessThan'
+    'body':'''
+      toBeLessThan($1);
+    '''
+    'description':'Asserts the given number is less than value.'
+
+# toBeLessThanOrEqualTo
+  'expect().toBeLessThanOrEqualTo();':
+    'prefix':'expectToBeLessThanOrEqualTo'
+    'body':'''
+      expect($1).toBeLessThanOrEqualTo($2);
+    '''
+    'description':'Asserts the given number is less than or equal to value.'
+
+  'toBeLessThanOrEqualTo();':
+    'prefix':'toBeLessThanOrEqualTo'
+    'body':'''
+      toBeLessThanOrEqualTo($1);
+    '''
+    'description':'Asserts the given number is less than or equal to value.'
+
+# toBeGreaterThan
+  'expect().toBeGreaterThan();':
+    'prefix':'toBeGreaterThan'
+    'body':'''
+      expect($1).toBeGreaterThan($2);
+    '''
+    'description':'Asserts the given number is greater than value.'
+
+  'toBeGreaterThan();':
+    'prefix':'toBeGreaterThan'
+    'body':'''
+      toBeGreaterThan($1);
+    '''
+    'description':'Asserts the given number is greater than value.'
+
+# toBeGreaterThanOrEqualTo
+  'expect().toBeGreaterThanOrEqualTo();':
+    'prefix':'expectToBeGreaterThanOrEqualTo'
+    'body':'''
+      expect($1).toBeGreaterThanOrEqualTo($2);
+    '''
+    'description':'Asserts the given number is greater than or equal to value.'
+
+  'toBeGreaterThanOrEqualTo();':
+    'prefix':'toBeGreaterThanOrEqualTo'
+    'body':'''
+      toBeGreaterThanOrEqualTo($1);
+    '''
+    'description':'Asserts the given number is greater than or equal to value.'
+
+# toInclude
+  'expect().toInclude();':
+    'prefix':'expectToInclude'
+    'body':'''
+      expect($1).toInclude($2);
+    '''
+    'description':'Asserts that a given value is included (or "contained") within another.
+    The actual value may be an array, object, or a string.
+    The comparator function, if given, should compare two objects and return false if they are not equal. The default is to use isEqual.'
+
+  'toInclude();':
+    'prefix':'toInclude'
+    'body':'''
+      toInclude($1);
+    '''
+    'description':'Asserts that a given value is included (or "contained") within another.
+    The actual value may be an array, object, or a string.
+    The comparator function, if given, should compare two objects and return false if they are not equal. The default is to use isEqual.'
+
+# toExclude
+  'expect().toExclude();':
+    'prefix':'expectToExclude'
+    'body':'''
+      expect($1).toExclude($2);
+    '''
+    'description':'Asserts that a given value is not included (or "contained") within another.
+    The actual value may be an array, object, or a string.
+    The comparator function, if given, should compare two objects and return false if they are not equal. The default is to use isEqual.'
+
+  'toExclude();':
+    'prefix':'toExclude'
+    'body':'''
+      toExclude($1);
+    '''
+    'description':'Asserts that a given value is not included (or "contained") within another.
+    The actual value may be an array, object, or a string.
+    The comparator function, if given, should compare two objects and return false if they are not equal. The default is to use isEqual.'
+
+# toIncludeKey
+  'expect().toIncludeKey();':
+    'prefix':'expectToIncludeKey'
+    'body':'''
+      expect($1).toIncludeKey($2);
+    '''
+    'description':'Asserts that the given object (may be an array, or a function, or anything with keys) contains all of the provided keys.
+    The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
+    By default, a shallow check with Object.prototype.hasOwnProperty is performed.'
+
+  'toIncludeKey();':
+    'prefix':'toIncludeKey'
+    'body':'''
+      toIncludeKey($1);
+    '''
+    'description':'Asserts that the given object (may be an array, or a function, or anything with keys) contains all of the provided keys.
+    The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
+    By default, a shallow check with Object.prototype.hasOwnProperty is performed.'
+
+# toIncludeKeys
+  'expect().toIncludeKeys();':
+    'prefix':'expectToIncludeKeys'
+    'body':'''
+      expect($1).toIncludeKeys($2);
+    '''
+    'description':'Asserts that the given object (may be an array, or a function, or anything with keys) contains all of the provided keys.
+    The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
+    By default, a shallow check with Object.prototype.hasOwnProperty is performed.'
+
+  'toIncludeKeys();':
+    'prefix':'toIncludeKeys'
+    'body':'''
+      toIncludeKeys($1);
+    '''
+    'description':'Asserts that the given object (may be an array, or a function, or anything with keys) contains all of the provided keys.
+    The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
+    By default, a shallow check with Object.prototype.hasOwnProperty is performed.'
+
+# toExcludeKey
+  'expect().toExcludeKey();':
+    'prefix':'expectToExcludeKey'
+    'body':'''
+      expect($1).toExcludeKey($2);
+    '''
+    'description':'Asserts that the given object (may be an array, or a function, or anything with keys) does not contain any of the provided keys.
+    The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
+    By default, a shallow check with Object.prototype.hasOwnProperty is performed.'
+
+  'toExcludeKey();':
+    'prefix':'toExcludeKey'
+    'body':'''
+      toExcludeKey($1);
+    '''
+    'description':'Asserts that the given object (may be an array, or a function, or anything with keys) does not contain any of the provided keys.
+    The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
+    By default, a shallow check with Object.prototype.hasOwnProperty is performed.'
+
+# toExcludeKeys
+  'expect().toExcludeKeys();':
+    'prefix':'expectToExcludeKeys'
+    'body':'''
+      expect($1).toExcludeKeys($2);
+    '''
+    'description':'Asserts that the given object (may be an array, or a function, or anything with keys) does not contain any of the provided keys.
+    The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
+    By default, a shallow check with Object.prototype.hasOwnProperty is performed.'
+
+  'toExcludeKeys();':
+    'prefix':'toExcludeKeys'
+    'body':'''
+      toExcludeKeys($1);
+    '''
+    'description':'Asserts that the given object (may be an array, or a function, or anything with keys) does not contain any of the provided keys.
+    The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
+    By default, a shallow check with Object.prototype.hasOwnProperty is performed.'
