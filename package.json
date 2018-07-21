@@ -3,7 +3,12 @@
   "main": "./lib/expect",
   "version": "0.3.0",
   "description": "Atom snippet package for npm expect@1.x assertion library",
-  "keywords": [],
+  "keywords": [
+    "expect",
+    "assertion",
+    "unit-testing",
+    "snippet"
+  ],
   "activationCommands": {
     "atom-workspace": "expect:toggle"
   },
