@@ -8,7 +8,7 @@
   "activationCommands": {
     "atom-workspace": "expect:toggle"
   },
-  "repository": "https://github.com/atom/expect",
+  "repository": "https://github.com/MikeBruns/expect",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
