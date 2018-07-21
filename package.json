@@ -2,7 +2,7 @@
   "name": "expect",
   "main": "./lib/expect",
   "version": "0.1.0",
-  "description": "A short description of your package",
+  "description": "Atom snippet package for npm expect@1.x assertion library",
   "keywords": [],
   "activationCommands": {
     "atom-workspace": "expect:toggle"
