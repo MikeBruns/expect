@@ -5,6 +5,9 @@
 
 Atom snippet package for [mjackson/expect](https://github.com/mjackson/expect) assertion library.
 
+Issues or suggestions? Let us know!  
+https://github.com/MikeBruns/expect/issues
+
 ## How to Install 
 You can install this package through the atom text editor. Atom sometimes needs restarted before recognizing the package and you can use the snippets. 
 
