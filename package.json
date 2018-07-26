@@ -1,7 +1,7 @@
 {
   "name": "expect",
   "main": "./lib/expect",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Atom snippet package for npm expect@1.x assertion library",
   "keywords": [
     "expect",
