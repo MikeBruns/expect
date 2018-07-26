@@ -16,19 +16,27 @@
     '''
     'description':'Import expect package in file. (ES6)'
 
+#General Expect Statement Alone
+  'expect()':
+    'prefix':'expect'
+    'body':'''
+      expect($1)$2
+    '''
+    'description':'General expect() statement'
+
 #Assertions
 # toExist
   'expect().toExist();':
     'prefix':'expectToExist'
     'body':'''
-      expect($1).toExist();
+      expect($1).toExist();$2
     '''
     'description':'Asserts the given object is truthy.'
 
   'toExist();':
     'prefix':'toExist'
     'body':'''
-      toExist($1);
+      toExist();
     '''
     'description':'Asserts the given object is truthy.'
 
@@ -36,14 +44,14 @@
   'expect().toNotExist();':
     'prefix':'expectToNotExist'
     'body':'''
-      expect($1).toNotExist();
+      expect($1).toNotExist();$2
     '''
     'description':'Asserts the given object is falsy.'
 
   'toNotExist();':
     'prefix':'toNotExist'
     'body':'''
-      toExist($1);
+      toNotExist();
     '''
     'description':'Asserts the given object is falsy.'
 
@@ -51,14 +59,14 @@
   'expect().toBe();':
     'prefix':'expectToBe'
     'body':'''
-      expect($1).toBe($2);
+      expect($1).toBe($2);$3
     '''
     'description':'Asserts that object is strictly equal to value using ==='
 
   'toBe();':
     'prefix':'toBe'
     'body':'''
-      toBe($1);
+      toBe($1);$2
     '''
     'description':'Asserts that object is strictly equal to value using ==='
 
@@ -66,14 +74,14 @@
   'expect().toNotBe();':
     'prefix':'expectToNotBe'
     'body':'''
-      expect($1).toNotBe($2);
+      expect($1).toNotBe($2);$3
     '''
     'description':'Asserts that object is strictly NOT equal to value using ==='
 
   'toNotBe();':
     'prefix':'toNotBe'
     'body':'''
-      toNotBe($1);
+      toNotBe($1);$2
     '''
     'description':'Asserts that object is strictly NOT equal to value using ==='
 
@@ -81,14 +89,14 @@
   'expect().toEqual();':
     'prefix':'expectToNotBe'
     'body':'''
-      expect($1).toEqual($2);
+      expect($1).toEqual($2);$3
     '''
     'description':'Asserts that the given object equals value using npm module is-equal.'
 
   'toEqual();':
     'prefix':'toEqual'
     'body':'''
-      toEqual($1);
+      toEqual($1);$2
     '''
     'description':'Asserts that the given object equals value using npm module is-equal.'
 
@@ -96,14 +104,14 @@
   'expect().toNotEqual();':
     'prefix':'expectToNotEqual'
     'body':'''
-      expect($1).toNotEqual($2);
+      expect($1).toNotEqual($2);$3
     '''
     'description':'Asserts that the given object is not equal to value using npm module is-equal.'
 
   'toNotEqual();':
     'prefix':'toNotEqual'
     'body':'''
-      toNotEqual($1);
+      toNotEqual($1);$2
     '''
     'description':'Asserts that the given object is not equal to value using npm module is-equal.'
 
@@ -111,7 +119,7 @@
   'expect().toThrow();':
     'prefix':'expectToThrow'
     'body':'''
-      expect($1).toThrow($2);
+      expect($1).toThrow($2);$3
     '''
     'description':'Asserts that the given block throws an error.
     The error argument may be a constructor (to test using instanceof), or a string/RegExp to test against error.message.'
@@ -119,7 +127,7 @@
   'toThrow();':
     'prefix':'toThrow'
     'body':'''
-      toThrow($1);
+      toThrow($1);$2
     '''
     'description':'Asserts that the given block throws an error.
     The error argument may be a constructor (to test using instanceof), or a string/RegExp to test against error.message.'
@@ -128,14 +136,14 @@
   'expect().toNotThrow();':
     'prefix':'expectToNotThrow'
     'body':'''
-      expect($1).toNotThrow($2);
+      expect($1).toNotThrow($2);$3
     '''
     'description':'Asserts that the given block does not throw.'
 
   'toNotThrow();':
     'prefix':'toNotThrow'
     'body':'''
-      toNotThrow($1);
+      toNotThrow($1);$2
     '''
     'description':'Asserts that the given block does not throw.'
 
@@ -143,14 +151,14 @@
   'expect().toBeA();':
     'prefix':'expectToBeA'
     'body':'''
-      expect($1).expectToBeA($2);
+      expect($1).expectToBeA($2);$3
     '''
     'description':'Asserts the typeof the given object is string OR is an instanceof constructor.'
 
   'toBeA();':
     'prefix':'toBeA'
     'body':'''
-      toBeA($1);
+      toBeA($1);$2
     '''
     'description':'Asserts the typeof the given object is string OR is an instanceof constructor.'
 
@@ -158,14 +166,14 @@
   'expect().toNotBeA();':
     'prefix':'expectToNotBeA'
     'body':'''
-      expect($1).toNotBeA($2);
+      expect($1).toNotBeA($2);$3
     '''
     'description':'Asserts the typeof the given object is NOT string OR is NOT an instanceof constructor.'
 
   'toNotBeA();':
     'prefix':'toNotBeA'
     'body':'''
-      toNotBeA($1);
+      toNotBeA($1);$2
     '''
     'description':'Asserts the typeof the given object is string OR is NOT an instanceof constructor.'
 
@@ -173,7 +181,7 @@
   'expect().toMatch();':
     'prefix':'expectToMatch'
     'body':'''
-      expect($1).toMatch($2);
+      expect($1).toMatch($2);$3
     '''
     'description':'Asserts the given string or object matches a pattern.
     When using a string, pattern must be a RegExp. When using an object, pattern may be anything acceptable to tmatch.'
@@ -181,7 +189,7 @@
   'toMatch();':
     'prefix':'toMatch'
     'body':'''
-      toMatch($1);
+      toMatch($1);$2
     '''
     'description':'Asserts the given string or object matches a pattern.
     When using a string, pattern must be a RegExp. When using an object, pattern may be anything acceptable to tmatch.'
@@ -190,7 +198,7 @@
   'expect().toNotMatch();':
     'prefix':'expectToNotMatch'
     'body':'''
-      expect($1).toNotMatch($2);
+      expect($1).toNotMatch($2);$3
     '''
     'description':'Asserts the given string or object does not match a pattern.
     When using a string, pattern must be a RegExp. When using an object, pattern may be anything acceptable to tmatch.'
@@ -198,7 +206,7 @@
   'toNotMatch();':
     'prefix':'toNotMatch'
     'body':'''
-      toNotMatch($1);
+      toNotMatch($1);$2
     '''
     'description':'Asserts the given string or object does not match a pattern.
     When using a string, pattern must be a RegExp. When using an object, pattern may be anything acceptable to tmatch.'
@@ -207,14 +215,14 @@
   'expect().toBeLessThan();':
     'prefix':'expectToBeLessThan'
     'body':'''
-      expect($1).toBeLessThan($2);
+      expect($1).toBeLessThan($2);$3
     '''
     'description':'Asserts the given number is less than value.'
 
   'toBeLessThan();':
     'prefix':'toBeLessThan'
     'body':'''
-      toBeLessThan($1);
+      toBeLessThan($1);$2
     '''
     'description':'Asserts the given number is less than value.'
 
@@ -222,14 +230,14 @@
   'expect().toBeLessThanOrEqualTo();':
     'prefix':'expectToBeLessThanOrEqualTo'
     'body':'''
-      expect($1).toBeLessThanOrEqualTo($2);
+      expect($1).toBeLessThanOrEqualTo($2);$3
     '''
     'description':'Asserts the given number is less than or equal to value.'
 
   'toBeLessThanOrEqualTo();':
     'prefix':'toBeLessThanOrEqualTo'
     'body':'''
-      toBeLessThanOrEqualTo($1);
+      toBeLessThanOrEqualTo($1);$2
     '''
     'description':'Asserts the given number is less than or equal to value.'
 
@@ -237,14 +245,14 @@
   'expect().toBeGreaterThan();':
     'prefix':'toBeGreaterThan'
     'body':'''
-      expect($1).toBeGreaterThan($2);
+      expect($1).toBeGreaterThan($2);$3
     '''
     'description':'Asserts the given number is greater than value.'
 
   'toBeGreaterThan();':
     'prefix':'toBeGreaterThan'
     'body':'''
-      toBeGreaterThan($1);
+      toBeGreaterThan($1);$2
     '''
     'description':'Asserts the given number is greater than value.'
 
@@ -252,14 +260,14 @@
   'expect().toBeGreaterThanOrEqualTo();':
     'prefix':'expectToBeGreaterThanOrEqualTo'
     'body':'''
-      expect($1).toBeGreaterThanOrEqualTo($2);
+      expect($1).toBeGreaterThanOrEqualTo($2);$3
     '''
     'description':'Asserts the given number is greater than or equal to value.'
 
   'toBeGreaterThanOrEqualTo();':
     'prefix':'toBeGreaterThanOrEqualTo'
     'body':'''
-      toBeGreaterThanOrEqualTo($1);
+      toBeGreaterThanOrEqualTo($1);$2
     '''
     'description':'Asserts the given number is greater than or equal to value.'
 
@@ -267,7 +275,7 @@
   'expect().toInclude();':
     'prefix':'expectToInclude'
     'body':'''
-      expect($1).toInclude($2);
+      expect($1).toInclude($2);$3
     '''
     'description':'Asserts that a given value is included (or "contained") within another.
     The actual value may be an array, object, or a string.
@@ -276,7 +284,7 @@
   'toInclude();':
     'prefix':'toInclude'
     'body':'''
-      toInclude($1);
+      toInclude($1);$2
     '''
     'description':'Asserts that a given value is included (or "contained") within another.
     The actual value may be an array, object, or a string.
@@ -286,7 +294,7 @@
   'expect().toExclude();':
     'prefix':'expectToExclude'
     'body':'''
-      expect($1).toExclude($2);
+      expect($1).toExclude($2);$3
     '''
     'description':'Asserts that a given value is not included (or "contained") within another.
     The actual value may be an array, object, or a string.
@@ -295,7 +303,7 @@
   'toExclude();':
     'prefix':'toExclude'
     'body':'''
-      toExclude($1);
+      toExclude($1);$2
     '''
     'description':'Asserts that a given value is not included (or "contained") within another.
     The actual value may be an array, object, or a string.
@@ -305,7 +313,7 @@
   'expect().toIncludeKey();':
     'prefix':'expectToIncludeKey'
     'body':'''
-      expect($1).toIncludeKey($2);
+      expect($1).toIncludeKey($2);$3
     '''
     'description':'Asserts that the given object (may be an array, or a function, or anything with keys) contains all of the provided keys.
     The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
@@ -314,7 +322,7 @@
   'toIncludeKey();':
     'prefix':'toIncludeKey'
     'body':'''
-      toIncludeKey($1);
+      toIncludeKey($1);$2
     '''
     'description':'Asserts that the given object (may be an array, or a function, or anything with keys) contains all of the provided keys.
     The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
@@ -324,7 +332,7 @@
   'expect().toIncludeKeys();':
     'prefix':'expectToIncludeKeys'
     'body':'''
-      expect($1).toIncludeKeys($2);
+      expect($1).toIncludeKeys($2);$3
     '''
     'description':'Asserts that the given object (may be an array, or a function, or anything with keys) contains all of the provided keys.
     The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
@@ -333,7 +341,7 @@
   'toIncludeKeys();':
     'prefix':'toIncludeKeys'
     'body':'''
-      toIncludeKeys($1);
+      toIncludeKeys($1);$2
     '''
     'description':'Asserts that the given object (may be an array, or a function, or anything with keys) contains all of the provided keys.
     The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
@@ -343,7 +351,7 @@
   'expect().toExcludeKey();':
     'prefix':'expectToExcludeKey'
     'body':'''
-      expect($1).toExcludeKey($2);
+      expect($1).toExcludeKey($2);$3
     '''
     'description':'Asserts that the given object (may be an array, or a function, or anything with keys) does not contain any of the provided keys.
     The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
@@ -352,7 +360,7 @@
   'toExcludeKey();':
     'prefix':'toExcludeKey'
     'body':'''
-      toExcludeKey($1);
+      toExcludeKey($1);$2
     '''
     'description':'Asserts that the given object (may be an array, or a function, or anything with keys) does not contain any of the provided keys.
     The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
@@ -362,7 +370,7 @@
   'expect().toExcludeKeys();':
     'prefix':'expectToExcludeKeys'
     'body':'''
-      expect($1).toExcludeKeys($2);
+      expect($1).toExcludeKeys($2);$3
     '''
     'description':'Asserts that the given object (may be an array, or a function, or anything with keys) does not contain any of the provided keys.
     The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
@@ -371,7 +379,7 @@
   'toExcludeKeys();':
     'prefix':'toExcludeKeys'
     'body':'''
-      toExcludeKeys($1);
+      toExcludeKeys($1);$2
     '''
     'description':'Asserts that the given object (may be an array, or a function, or anything with keys) does not contain any of the provided keys.
     The optional parameter comparator is a function which if given an object and a string key, it should return a boolean detailing whether or not the key exists in the object.
@@ -381,7 +389,7 @@
   'expect(spy).toHaveBeenCalled();':
     'prefix':'expectToHaveBeenCalled'
     'body':'''
-      expect($1).toHaveBeenCalled();
+      expect($1).toHaveBeenCalled();$2
     '''
     'description':'Asserts the given spy function has been called at least once.'
 
@@ -396,7 +404,7 @@
   'expect(spy).toHaveBeenNotCalled();':
     'prefix':'expectToHaveNotBeenCalled'
     'body':'''
-      expect($1).toHaveBeenNotCalled();
+      expect($1).toHaveBeenNotCalled();$2
     '''
     'description':'Asserts the given spy function has not been called.'
 
@@ -411,13 +419,13 @@
   'expect(spy).toHaveBeenCalledWith();':
     'prefix':'expectToHaveBeenCalledWith'
     'body':'''
-      expect($1).toHaveBeenCalledWith($2);
+      expect($1).toHaveBeenCalledWith($2);$3
     '''
     'description':'Asserts the given spy function has been called with the expected arguments.'
 
   'toHaveBeenCalledWith();':
     'prefix':'toHaveBeenCalledWith'
     'body':'''
-      toHaveBeenCalledWith($1);
+      toHaveBeenCalledWith($1);$2
     '''
     'description':'Asserts the given spy function has been called with the expected arguments.'
