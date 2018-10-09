@@ -5,6 +5,9 @@
 
 Atom snippet package for general expect statements based on [mjackson/expect](https://github.com/mjackson/expect) assertion library.
 
+![Example](example.gif)
+
+
 ### Available Snippets
 ## Require (ES5) / Import (ES6)
 | Keyword         | Snippet      |
