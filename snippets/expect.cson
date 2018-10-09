@@ -87,7 +87,7 @@
 
 # toEqual
   'expect().toEqual();':
-    'prefix':'expectToNotBe'
+    'prefix':'expectToEqual'
     'body':'''
       expect($1).toEqual($2);$3
     '''
