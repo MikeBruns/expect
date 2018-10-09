@@ -3,20 +3,9 @@
 ![Build](https://travis-ci.org/MikeBruns/expect.svg?branch=master)
 [![Build status](https://ci.appveyor.com/api/projects/status/nivhe14l8dvfgqnl/branch/master?svg=true)](https://ci.appveyor.com/project/MikeBruns/expect/branch/master)
 
-Atom snippet package for [mjackson/expect](https://github.com/mjackson/expect) assertion library.
-
-Issues or suggestions? Let us know!  
-https://github.com/MikeBruns/expect/issues
-
-## How to Install 
-You can install this package through the atom text editor. Atom sometimes needs restarted before recognizing the package and you can use the snippets. 
-
-
-
-<br/> 
+Atom snippet package for general expect statements based on [mjackson/expect](https://github.com/mjackson/expect) assertion library.
 
 ### Available Snippets
-
 ## Require (ES5) / Import (ES6)
 | Keyword         | Snippet      |
 |:--------------- |:-------------|
@@ -61,4 +50,3 @@ The short hand is just the function name as a whole: `toExist`
 | `toHaveBeenCalled`        | `toHaveBeenCalled();` |
 | `toHaveBeenNotCalled`     | `toHaveBeenNotCalled();` |
 | `toHaveBeenCalledWith`    | `toHaveBeenCalledWith();` |
-
