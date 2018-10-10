@@ -5,7 +5,7 @@
 
 Atom snippet package for general expect statements based on [mjackson/expect](https://github.com/mjackson/expect) assertion library.
 
-![Example](example.gif)
+![Example](https://raw.githubusercontent.com/MikeBruns/expect/master/example.gif)
 
 
 ### Available Snippets
